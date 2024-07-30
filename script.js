@@ -22,7 +22,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     .then(data => {
         if (data.message === 'Login successful!') {
             alert('Welcome!');
-            card.classList.add('zoom-animation');
+            card.classList.add('zoom-active');
             setTimeout(() => {
                 card.style.display = 'none';
             }, 3000);
