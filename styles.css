@@ -103,3 +103,21 @@ button span {
     "wdth" 100;
 }
 
+.zoom-active .container {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.zoom-active::before {
+    content: '';
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, #89fffd, #ef32d9);
+    transform: translate(-50%, -50%) scale(10); /* Zoom to a single pixel effect */
+    transition: transform 0.3s ease;
+    z-index: 1;
+}
+
